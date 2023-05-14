@@ -1,9 +1,6 @@
 import React, { Suspense } from 'react';
 import { colors } from '../styles';
 
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-
 import video from '../assets/david.mp4';
 
 const AboutMe = () => {
