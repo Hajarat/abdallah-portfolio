@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from 'antd';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +10,13 @@ const Overwatch = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
+  const [lowerDivHeight, setLowerDivHeight] = React.useState();
+  const lowerDivRef = useRef();
+
+  React.useEffect(() => {
+    if (lowerDivRef.current) setLowerDivHeight(() => lowerDivRef.current.clientHeight);
+  }, [lowerDivRef.current]);
+
   return (
     <div className='selected-work-main'>
       <div className='selected-work-para'>
@@ -21,6 +28,12 @@ const Overwatch = ({
           }}
         >
           <FontAwesomeIcon
+            onMouseEnter={(event) => {
+              document.body.style.cursor = 'pointer';
+            }}
+            onMouseLeave={(event) => {
+              document.body.style.cursor = 'default';
+            }}
             style={{
               padding: '2rem'
             }}
@@ -50,9 +63,10 @@ const Overwatch = ({
 
       </div>
       <div
+        ref={lowerDivRef}
         style={{
           position: 'absolute',
-          bottom: '12rem',
+          bottom: `${lowerDivHeight ? lowerDivHeight : '8rem'}`,
           left: '3rem',
           display: 'flex',
           flexDirection: 'row',

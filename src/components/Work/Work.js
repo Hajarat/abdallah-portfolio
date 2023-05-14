@@ -57,7 +57,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Tomato.jpeg')}
+              // onClick={() => setSelectedSrc('/Tomato.jpeg')}
               src={'/Tomato.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -66,7 +66,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Tomato.jpeg')}
+              // onClick={() => setSelectedSrc('/Tomato.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -92,7 +92,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Drone.jpeg')}
+              // onClick={() => setSelectedSrc('/Drone.jpeg')}
               src={'/Drone.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -101,7 +101,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Drone.jpeg')}
+              // onClick={() => setSelectedSrc('/Drone.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -127,7 +127,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Dental.jpeg')}
+              // onClick={() => setSelectedSrc('/Dental.jpeg')}
               src={'/Dental.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -136,7 +136,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Dental.jpeg')}
+              // onClick={() => setSelectedSrc('/Dental.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -162,7 +162,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Cyberpunk.jpeg')}
+              // onClick={() => setSelectedSrc('/Cyberpunk.jpeg')}
               src={'/Cyberpunk.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -171,7 +171,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Cyberpunk.jpeg')}
+              // onClick={() => setSelectedSrc('/Cyberpunk.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -197,7 +197,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Poop.jpeg')}
+              // onClick={() => setSelectedSrc('/Poop.jpeg')}
               src={'/Poop.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -206,7 +206,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Poop.jpeg')}
+              // onClick={() => setSelectedSrc('/Poop.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -232,7 +232,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Gold.jpeg')}
+              // onClick={() => setSelectedSrc('/Gold.jpeg')}
               src={'/Gold.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -241,7 +241,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Gold.jpeg')}
+              // onClick={() => setSelectedSrc('/Gold.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
@@ -267,7 +267,7 @@ const Work = () => {
             }}
           >
             <img
-              onClick={() => setSelectedSrc('/Fashion.jpeg')}
+              // onClick={() => setSelectedSrc('/Fashion.jpeg')}
               src={'/Fashion.jpeg'}
               style={{
                 objectFit: 'cover',
@@ -276,7 +276,7 @@ const Work = () => {
               }}
             />
             <div
-              onClick={() => setSelectedSrc('/Fashion.jpeg')}
+              // onClick={() => setSelectedSrc('/Fashion.jpeg')}
               className='grey-screen'
               style={{
                 width: width/4-42/4-20,
