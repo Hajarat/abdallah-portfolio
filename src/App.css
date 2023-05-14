@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +37,104 @@
     transform: rotate(360deg);
   }
 }
+=======
+.ant-menu-item-active::after {
+  border-bottom-color: #c91b1d !important;
+}
+
+.aboutme {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+}
+
+.aboutme-content {
+  overflow: none;
+  font-size: 18px;
+  text-align: justify;
+  margin: 4rem 3rem auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parent-element-to-david-video {
+  overflow: hidden;
+  position: relative;
+}
+.david-video {
+  position: absolute;
+  left: 50%; /* % of surrounding element */
+  top: 50%;
+  transform: translate(-50%, -50%); /* % of current element */
+  height: 177.77777778vw;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100vh;
+}
+
+.work-collection {
+  margin: 4rem 30px 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0;
+}
+
+.selected-work-para {
+  font-size: 18px;
+  text-align: justify;
+  margin: 4rem 3rem auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-work-main {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+}
+
+.grey-screen {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: grey;
+  opacity: 0.0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: inherit;
+}
+
+.grey-screen:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 1300px) {
+  .work-collection {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1078px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 10rem auto;
+  }
+  .parent-element-to-david-video {
+    display: none;
+  }
+  .work-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+>>>>>>> 38c9f62 (Initialize project using Create React App)
