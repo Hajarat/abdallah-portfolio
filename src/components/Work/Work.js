@@ -296,8 +296,12 @@ const Work = () => {
         </div>
       }
       { selectedSrc && (
-        selectedSrc === '/overwatch/overwatch.jpeg' ? <Overwatch selectedSrc={selectedSrc} />
-        : null
+        selectedSrc === '/overwatch/overwatch.jpeg'
+          ? <Overwatch
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+            />
+          : null
       )}
     </>
   );

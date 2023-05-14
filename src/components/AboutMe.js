@@ -7,9 +7,9 @@ const AboutMe = () => {
   return (
     <div className='aboutme'>
       <div className='aboutme-content'>
-        <h1>Abdallah Hajarat</h1>
+        <h1 style={{fontSize: 72}}>Abdallah Hajarat</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          I'm a 6th year student at German Jordanian University. I have a passion for design and visual communication, and I've been lucky enough to have the opportunity to study and develop my skills in these areas throughout my time at university. I love experimenting with different styles and techniques, and I'm always looking for new ways to challenge myself and push my creativity to the limit. When I'm not working on design projects, you can usually find me exploring new coffee shops, watching movies, or spending time with friends. I'm excited to see where my design journey will take me in the future, and I can't wait to see what opportunities and challenges lie ahead!
         </p>
       </div>
       <div className='parent-element-to-david-video'>

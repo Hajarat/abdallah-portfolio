@@ -1,12 +1,33 @@
 import React from 'react';
 import { Button } from 'antd';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faChevronLeft
+} from '@fortawesome/free-solid-svg-icons';
+
 const Overwatch = ({
-  selectedSrc
+  selectedSrc,
+  setSelectedSrc,
 }) => {
   return (
     <div className='selected-work-main'>
       <div className='selected-work-para'>
+        <div
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            left: '1rem',
+          }}
+        >
+          <FontAwesomeIcon
+            style={{
+              padding: '2rem'
+            }}
+            onClick={() => setSelectedSrc(() => null)}
+            icon={faChevronLeft}
+          />
+        </div>
         <h1>Overwatch</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.

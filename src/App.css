@@ -15,13 +15,13 @@
 
 .aboutme-content {
   overflow: none;
-  font-size: 18px;
+  font-size: 21px;
   text-align: justify;
-  margin: 4rem 3rem auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20% 3.5rem auto;
 }
 
 .parent-element-to-david-video {
