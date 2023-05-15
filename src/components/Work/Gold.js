@@ -6,7 +6,7 @@ import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const Overwatch = ({
+const Gold = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
@@ -41,9 +41,9 @@ const Overwatch = ({
             icon={faChevronLeft}
           />
         </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
+        <h1 style={{fontSize: '60px'}}>Redbull Fifa Trophy</h1>
         <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          The model is a concept for a trophy from Redbull for a FIFA tournament, I participated in doing the lighting and texturing for the model.
         </p>
       </div>
       <div
@@ -58,7 +58,7 @@ const Overwatch = ({
             height: '100%',
             position: 'absolute',
             objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
+            transform: 'translate(-28%, 0)',
           }}
         />
 
@@ -67,7 +67,7 @@ const Overwatch = ({
         ref={lowerDivRef}
         style={{
           position: 'absolute',
-          bottom: `${lowerDivHeight ? lowerDivHeight : '8rem'}`,
+          bottom: `6rem`,
           left: '3rem',
           display: 'flex',
           flexDirection: 'row',
@@ -75,15 +75,15 @@ const Overwatch = ({
         }}
       >
         <img
-          src={'/overwatch/xbox.jpeg'}
+          src={'Gold-white.jpeg'}
           style={card}
         />
         <img
-          src={'/overwatch/console.jpeg'}
+          src={'/Gold-blue.jpeg'}
           style={card}
         />
         <img
-          src={'/overwatch/console2.jpeg'}
+          src={'/Gold-alt.jpeg'}
           style={card}
         />
       </div>
@@ -91,7 +91,7 @@ const Overwatch = ({
   );
 };
 
-export default Overwatch;
+export default Gold;
 
 const card = {
   width: '340px',

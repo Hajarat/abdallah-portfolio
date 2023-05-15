@@ -6,7 +6,9 @@ import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const Overwatch = ({
+import video from '../../assets/Tomato.mp4';
+
+const HVSF = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
@@ -41,27 +43,21 @@ const Overwatch = ({
             icon={faChevronLeft}
           />
         </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
+        <h1 style={{fontSize: '60px'}}>HVSF</h1>
         <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          This project I designed the logo which is referring to having a technological farm logo, modeling the cup and the packaging.
         </p>
       </div>
-      <div
-        style={{
-          overflow: 'hidden',
-          position: 'relative',
-        }}
-      >
-        <img
-          src={selectedSrc}
-          style={{
-            height: '100%',
-            position: 'absolute',
-            objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
-          }}
-        />
-
+      <div className='parent-element-to-selected-video'>
+        <video
+          className='selected-video'
+          autoPlay
+          muted
+        >
+          <source
+            src={video}
+          />
+        </video>
       </div>
       <div
         ref={lowerDivRef}
@@ -75,15 +71,17 @@ const Overwatch = ({
         }}
       >
         <img
-          src={'/overwatch/xbox.jpeg'}
+          src={'/HVSFLogo.jpeg'}
           style={card}
         />
         <img
-          src={'/overwatch/console.jpeg'}
-          style={card}
+          src={'/HVSFQR.jpeg'}
+          style={{
+            ...card,
+          }}
         />
         <img
-          src={'/overwatch/console2.jpeg'}
+          src={'/Tomato.jpeg'}
           style={card}
         />
       </div>
@@ -91,7 +89,7 @@ const Overwatch = ({
   );
 };
 
-export default Overwatch;
+export default HVSF;
 
 const card = {
   width: '340px',

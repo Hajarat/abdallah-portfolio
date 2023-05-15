@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 0;
+  overflow: hidden;
 }
 
 .aboutme-content {
@@ -39,6 +40,20 @@
   min-width: 100vh;
 }
 
+.parent-element-to-selected-video {
+  overflow: hidden;
+  position: relative;
+}
+.selected-video {
+  position: absolute;
+  left: 50%; /* % of surrounding element */
+  top: 50%;
+  transform: translate(-50%, -50%); /* % of current element */
+  height: 100%;
+  min-height: 100%;
+  min-width: 100vh;
+}
+
 .work-collection {
   margin: 4rem 30px 2rem;
   display: grid;
@@ -62,6 +77,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 0;
+  overflow: hidden;
 }
 
 .grey-screen {

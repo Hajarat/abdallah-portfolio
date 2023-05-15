@@ -6,7 +6,9 @@ import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const Overwatch = ({
+import video from '../../assets/poop.mp4';
+
+const Poop = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
@@ -18,7 +20,13 @@ const Overwatch = ({
   }, [lowerDivRef.current]);
 
   return (
-    <div className='selected-work-main'>
+    <div style={{
+      position: 'relative',
+      height: '100vh',
+      display: 'grid',
+      gridTemplateColumns: '1fr 2fr',
+      columnGap: 0,
+    }}>
       <div className='selected-work-para'>
         <div
           style={{
@@ -41,57 +49,27 @@ const Overwatch = ({
             icon={faChevronLeft}
           />
         </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
+        <h1 style={{fontSize: '60px'}}>Stop Motion</h1>
         <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          The project was to see how much creative we can be in terms of story telling and background design.
         </p>
       </div>
-      <div
-        style={{
-          overflow: 'hidden',
-          position: 'relative',
-        }}
-      >
-        <img
-          src={selectedSrc}
-          style={{
-            height: '100%',
-            position: 'absolute',
-            objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
-          }}
-        />
-
-      </div>
-      <div
-        ref={lowerDivRef}
-        style={{
-          position: 'absolute',
-          bottom: `${lowerDivHeight ? lowerDivHeight : '8rem'}`,
-          left: '3rem',
-          display: 'flex',
-          flexDirection: 'row',
-          gap: '0.6rem',
-        }}
-      >
-        <img
-          src={'/overwatch/xbox.jpeg'}
-          style={card}
-        />
-        <img
-          src={'/overwatch/console.jpeg'}
-          style={card}
-        />
-        <img
-          src={'/overwatch/console2.jpeg'}
-          style={card}
-        />
+      <div className='parent-element-to-selected-video'>
+        <video
+          className='selected-video'
+          autoPlay
+          muted
+        >
+          <source
+            src={video}
+          />
+        </video>
       </div>
     </div>
   );
 };
 
-export default Overwatch;
+export default Poop;
 
 const card = {
   width: '340px',

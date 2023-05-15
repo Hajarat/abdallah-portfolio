@@ -6,7 +6,9 @@ import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const Overwatch = ({
+import video from '../../assets/Fashion.mp4';
+
+const Fashion = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
@@ -18,7 +20,13 @@ const Overwatch = ({
   }, [lowerDivRef.current]);
 
   return (
-    <div className='selected-work-main'>
+    <div style={{
+      position: 'relative',
+      height: '100vh',
+      display: 'grid',
+      gridTemplateColumns: '3fr 4fr',
+      columnGap: 0,
+    }}>
       <div className='selected-work-para'>
         <div
           style={{
@@ -41,27 +49,21 @@ const Overwatch = ({
             icon={faChevronLeft}
           />
         </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
+        <h1 style={{fontSize: '60px'}}>Fashion Design</h1>
         <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          This project where we had to figure out the approach for designing the clothings then we had to make cloth simulation for the 3d model.
         </p>
       </div>
-      <div
-        style={{
-          overflow: 'hidden',
-          position: 'relative',
-        }}
-      >
-        <img
-          src={selectedSrc}
-          style={{
-            height: '100%',
-            position: 'absolute',
-            objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
-          }}
-        />
-
+      <div className='parent-element-to-selected-video'>
+        <video
+          className='selected-video'
+          autoPlay
+          muted
+        >
+          <source
+            src={video}
+          />
+        </video>
       </div>
       <div
         ref={lowerDivRef}
@@ -75,23 +77,21 @@ const Overwatch = ({
         }}
       >
         <img
-          src={'/overwatch/xbox.jpeg'}
+          src={selectedSrc}
           style={card}
         />
         <img
-          src={'/overwatch/console.jpeg'}
-          style={card}
-        />
-        <img
-          src={'/overwatch/console2.jpeg'}
-          style={card}
+          src={'/Fashion2.jpeg'}
+          style={{
+            ...card,
+          }}
         />
       </div>
     </div>
   );
 };
 
-export default Overwatch;
+export default Fashion;
 
 const card = {
   width: '340px',

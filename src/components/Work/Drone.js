@@ -6,9 +6,9 @@ import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
-const Overwatch = ({
+const Drone = ({
   selectedSrc,
-  setSelectedSrc,
+  setSelectedSrc
 }) => {
   const [lowerDivHeight, setLowerDivHeight] = React.useState();
   const lowerDivRef = useRef();
@@ -41,9 +41,9 @@ const Overwatch = ({
             icon={faChevronLeft}
           />
         </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
+        <h1 style={{fontSize: '60px'}}>Drone Concept</h1>
         <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          This was a challenge for myself to make a drone concept drawing, modeling, texturing, rendering the model but after all it was a nice experience to have.
         </p>
       </div>
       <div
@@ -58,7 +58,7 @@ const Overwatch = ({
             height: '100%',
             position: 'absolute',
             objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
+            transform: 'translate(-30%, 0)',
           }}
         />
 
@@ -75,15 +75,15 @@ const Overwatch = ({
         }}
       >
         <img
-          src={'/overwatch/xbox.jpeg'}
+          src={'/Drone.jpeg'}
           style={card}
         />
         <img
-          src={'/overwatch/console.jpeg'}
+          src={'/Drone2.jpeg'}
           style={card}
         />
         <img
-          src={'/overwatch/console2.jpeg'}
+          src={'/Drone3.jpeg'}
           style={card}
         />
       </div>
@@ -91,7 +91,7 @@ const Overwatch = ({
   );
 };
 
-export default Overwatch;
+export default Drone;
 
 const card = {
   width: '340px',
