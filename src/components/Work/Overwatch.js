@@ -1,91 +1,132 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Button } from 'antd';
+
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
+import { colors } from '../../styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 
+const breakpointHeight = 800;
+
 const Overwatch = ({
   selectedSrc,
   setSelectedSrc,
 }) => {
-  const [lowerDivHeight, setLowerDivHeight] = React.useState();
-  const lowerDivRef = useRef();
-
-  React.useEffect(() => {
-    if (lowerDivRef.current) setLowerDivHeight(() => lowerDivRef.current.clientHeight);
-  }, [lowerDivRef.current]);
+  const { width, height } = useWindowDimensions();
 
   return (
-    <div className='selected-work-main'>
-      <div className='selected-work-para'>
-        <div
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            left: '1rem',
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: (height > breakpointHeight) ? 'column' : 'row',
+        alignItems: (height < breakpointHeight) && 'flex-start',
+        gap: '0.6rem',
+        margin: '2.6rem',
+        maxWidth: '1000px'
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          top: '1rem',
+          left: '1rem',
+        }}
+      >
+        <FontAwesomeIcon
+          onMouseEnter={(event) => {
+            document.body.style.cursor = 'pointer';
           }}
-        >
-          <FontAwesomeIcon
-            onMouseEnter={(event) => {
-              document.body.style.cursor = 'pointer';
-            }}
-            onMouseLeave={(event) => {
-              document.body.style.cursor = 'default';
-            }}
-            style={{
-              padding: '2rem'
-            }}
-            onClick={() => setSelectedSrc(() => null)}
-            icon={faChevronLeft}
-          />
-        </div>
-        <h1 style={{fontSize: '60px'}}>Event Design</h1>
-        <p style={{fontSize: '21px'}}>
-          This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
-        </p>
+          onMouseLeave={(event) => {
+            document.body.style.cursor = 'default';
+          }}
+          style={{
+            padding: '2rem'
+          }}
+          onClick={() => setSelectedSrc(() => null)}
+          icon={faChevronLeft}
+        />
       </div>
       <div
         style={{
-          overflow: 'hidden',
-          position: 'relative',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'flex-start',
+          gap: '0.6rem'
         }}
       >
         <img
           src={selectedSrc}
           style={{
-            height: '100%',
-            position: 'absolute',
-            objectFit: 'cover',
-            transform: 'translate(-15%, 0)',
+            height: '60vh',
+            // position: 'absolute',
+            // objectFit: 'cover',
+            // transform: 'translate(-15%, 0)',
           }}
         />
-
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.6rem',
+          }}
+        >
+          <img
+            src={'/overwatch/xbox.jpeg'}
+            style={card}
+          />
+          <img
+            src={'/overwatch/console.jpeg'}
+            style={card}
+          />
+          <img
+            src={'/overwatch/console2.jpeg'}
+            style={card}
+          />
+        </div>
       </div>
       <div
-        ref={lowerDivRef}
         style={{
-          position: 'absolute',
-          bottom: `${lowerDivHeight ? lowerDivHeight : '8rem'}`,
-          left: '3rem',
           display: 'flex',
-          flexDirection: 'row',
-          gap: '0.6rem',
+          flexDirection: (height > breakpointHeight) ? 'row' : 'column',
+          maxHeight: (height < breakpointHeight) && '60vh',
+          justifyContent: 'space-between'
         }}
       >
-        <img
-          src={'/overwatch/xbox.jpeg'}
-          style={card}
-        />
-        <img
-          src={'/overwatch/console.jpeg'}
-          style={card}
-        />
-        <img
-          src={'/overwatch/console2.jpeg'}
-          style={card}
-        />
+        <div>
+          <h1
+            style={{
+              fontSize: (height > breakpointHeight) ? '60px' : '40px',
+              margin: (height < breakpointHeight) && 0,
+              textAlign: (height < breakpointHeight) && 'right'
+            }}
+          >
+              Event Design
+          </h1>
+          <p
+            style={{
+              fontSize: (height > breakpointHeight) ? '21px' : '9px',
+              textAlign: (height < breakpointHeight) && 'right',
+            }}
+          >
+            This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.
+          </p>
+        </div>
+        <div>
+          <h1
+            style={{
+              margin: 0,
+              color: colors.black,
+              fontSize: (height > breakpointHeight) ? 180 : 120,
+              textAlign: (height < breakpointHeight) && 'right',
+            }}
+          >
+            01
+          </h1>
+        </div>
       </div>
     </div>
   );
@@ -94,9 +135,8 @@ const Overwatch = ({
 export default Overwatch;
 
 const card = {
-  width: '340px',
-  height: '220px',
+  width: 'auto',
+  height: 'calc(20vh - 0.4rem)',
   objectFit: 'cover',
-  borderRadius: '5px',
-  border: '3px solid white',
+  border: '0',
 }

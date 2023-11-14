@@ -41,7 +41,6 @@
 }
 
 .parent-element-to-selected-video {
-  overflow: hidden;
   position: relative;
 }
 .selected-video {

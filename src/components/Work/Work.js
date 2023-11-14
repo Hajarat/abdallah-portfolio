@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { colors } from '../../styles';
 
 import { Popover } from 'antd';
+
+import Qaleb from './Qaleb';
+import QalebNoSidePhotos from './QalebNoSidePhotos';
+import VideoQaleb from './VideoQaleb';
+import VideoQalebNoSidePhotos from './VideoQalebNoSidePhotos';
+
 import Overwatch from './Overwatch';
 import HVSF from './HVSF';
 import Drone from './Drone';
@@ -303,46 +309,84 @@ const Work = () => {
       }
       { selectedSrc && (
         selectedSrc === '/overwatch/overwatch.jpeg'
-          ? <Overwatch
+          ? <Qaleb
               selectedSrc={selectedSrc}
               setSelectedSrc={setSelectedSrc}
+              img1src={'/overwatch/xbox.jpeg'}
+              img2src={'/overwatch/console.jpeg'}
+              img3src={'/overwatch/console2.jpeg'}
+              title={'Event Design'}
+              content={'This project was for event designing, which included designing tickets, website, poster, crowd monitors, staff clothing to booth design.'}
+              number={'01'}
             />
-          : selectedSrc === '/Tomato.jpeg'
-            ? <HVSF
-                selectedSrc={selectedSrc}
-                setSelectedSrc={setSelectedSrc}
-              />
-            : selectedSrc === '/Drone.jpeg'
-              ? <Drone
-                  selectedSrc={selectedSrc}
-                  setSelectedSrc={setSelectedSrc}
-                />
-              : selectedSrc === '/Dental.jpeg'
-                ? <Dental
-                    selectedSrc={selectedSrc}
-                    setSelectedSrc={setSelectedSrc}
-                  />
-                : selectedSrc === '/Cyberpunk.jpeg'
-                  ? <RedSpades
-                      selectedSrc={selectedSrc}
-                      setSelectedSrc={setSelectedSrc}
-                    />
-                  : selectedSrc === '/Poop.jpeg'
-                    ? <Poop
-                        selectedSrc={selectedSrc}
-                        setSelectedSrc={setSelectedSrc}
-                      />
-                    : selectedSrc === '/Gold.jpeg'
-                      ? <Gold
-                          selectedSrc={selectedSrc}
-                          setSelectedSrc={setSelectedSrc}
-                        />
-                      : selectedSrc === '/Fashion.jpeg'
-                        ? <Fashion
-                            selectedSrc={selectedSrc}
-                            setSelectedSrc={setSelectedSrc}
-                          />
-                        : null
+          : selectedSrc === '/Tomato.jpeg' ?
+            <VideoQaleb
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              img1src={'/HVSFLogo.jpeg'}
+              img2src={'/HVSFQR.jpeg'}
+              img3src={'/Tomato.jpeg'}
+              title={'HVSF'}
+              content={'This project I designed the logo which is referring to having a technological farm logo, modeling the cup and the packaging.'}
+              number={'02'}
+            />
+          : selectedSrc === '/Drone.jpeg' ?
+            <Qaleb
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              img1src={'/Drone.jpeg'}
+              img2src={'/Drone2.jpeg'}
+              img3src={'/Drone3.jpeg'}
+              title={'Drone Concept'}
+              content={'This was a challenge for myself to make a drone concept drawing, modeling, texturing, rendering the model but after all it was a nice experience to have.'}
+              number={'03'}
+            />
+          : selectedSrc === '/Dental.jpeg' ?
+            <QalebNoSidePhotos
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              title={'Logo Design'}
+              content={'This project was for a dental clinic that was looking for a logo that can communicate with the age group of 7-10 years old, to encourage them to have early orthodontic care and to be seen as friendly as possible.'}
+              number={'04'}
+            />
+          : selectedSrc === '/Cyberpunk.jpeg' ?
+            <VideoQalebNoSidePhotos
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              title={'RedSpades Website'}
+              content={'TThis project was for RedSpades digital agency, the idea was to have a looped video, the video contains six buildings each building represent a department in the agency also a building in the middle with the main logo on top.'}
+              number={'05'}
+            />
+          : selectedSrc === '/Poop.jpeg' ?
+            <VideoQalebNoSidePhotos
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              title={'Stop Motion'}
+              content={'The project was to see how much creative we can be in terms of story telling and background design.'}
+              number={'06'}
+            />
+          : selectedSrc === '/Gold.jpeg' ?
+            <Qaleb
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              img1src={'/Gold-white.jpeg'}
+              img2src={'/Gold-blue.jpeg'}
+              img3src={'/Gold-alt.jpeg'}
+              title={'Redbull Fifa Trophy'}
+              content={'The model is a concept for a trophy from Redbull for a FIFA tournament, I participated in doing the lighting and texturing for the model.'}
+              number={'07'}
+            />
+          : selectedSrc === '/Fashion.jpeg' ?
+            <VideoQaleb
+              selectedSrc={selectedSrc}
+              setSelectedSrc={setSelectedSrc}
+              img1src={'/Fashion.jpeg'}
+              img2src={'/Fashion2.jpeg'}
+              title={'Fashion Design'}
+              content={'This project where we had to figure out the approach for designing the clothings then we had to make cloth simulation for the 3d model.'}
+              number={'08'}
+            />
+          : null
                 
       )}
     </>
